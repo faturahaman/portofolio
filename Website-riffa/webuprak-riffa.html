@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogwart</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    
+    
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&family=Poppins:wght@300&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Sedan SC';
+        }
+
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        :root {
+            --bg-color: #191e27;
+            --second-bg-color: #510f0f;
+            --text-color: #fff;
+            --main-color: rgb(0, 0, 0);
+
+        }
+
+
+
+        .header {
+         
+            color: white;
+            background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,0) 12%, rgba(0,0,0,0.25634517766497467) 33%, rgba(0,0,0,1) 94%);
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 22px;
+            margin: 2px;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .navbar a {
+            display: flex;
+            justify-content: space-around;
+            padding: 2px;
+            text-decoration: none;
+            color: inherit;
+            gap: 5px;
+            font-weight: 20px;
+            transition: .3s;
+        }
+
+        
+
+
+        body {
+            background-color: var(--bg-color);
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 10rem 9% 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px;
+            background: var(--main-color);
+            border-radius: 4rem;
+            box-shadow: 0 0 1rem var(--main-color);
+            font-size: .9rem;
+            color: var(--second-bg-color);
+            font-weight: 600;
+            transition: .5 ease;
+        }
+
+        .btn:hover {
+            box-shadow: none;
+        }
+
+
+        .home {
+            display: flex;
+            justify-items: center;
+            position: relative;
+            background-image: url(enlarge_download.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+
+        .home-content {
+            margin-bottom: 40px;
+            color: var(--text-color);
+            margin: auto;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        .home-content h1 {
+            font-size: 50px;
+        }
+
+        .home-content h3 {
+            font-size: 25px;
+        }
+
+        
+
+        span {
+            color: var(--main-color);
+            text-shadow: 2px 2px 5px white;
+        
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 4.5rem;
+        }
+
+        /* service */
+
+        .photo::-webkit-scrollbar {
+            display: none;
+        }
+
+     
+
+        /* end service */
+        /* about */
+        .about {
+            width: 100%;
+            margin-top: -80px;
+            text-align: center;
+            
+            align-items: center; 
+        }
+
+        .desc{
+            margin: 12px;
+            margin-top: 40px;
+        }
+        .desc p {
+            padding: 12px;
+        }
+         /* academic */
+         .news-card {
+  width: 100%;
+  border: 1px solid #ddd;
+  
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+}
+
+.news-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover .news-content {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.news-content h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover h2 {
+  color: #007bff;
+}
+
+.news-content p {
+  margin: 0;
+  color: #dcdcdc;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover p {
+  color: #333;
+}
+
+.btn-read-more {
+  display: block;
+  margin-top: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.btn-read-more:hover {
+  background-color: #0069d9;
+}
+
+.academic-content {
+    display: flex;
+    gap: 12px;
+
+}
+
+         /* end academic */
+        /* album */
+
+        /* end album */
+
+        /* album */
+
+        /* footer */
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: cneter;
+            flex-wrap: wrap;
+            padding: 2rem 9%;
+            width: 100%;
+            background: var(--bg-color);
+            box-shadow: 20px 2px 123px var(--main-color);
+            border-top: 4px solid var(--main-color);
+
+        }
+
+        .footer-text {
+            font-size: 1rem;
+            color: var(--second-bg-color);
+        }
+
+        .footer-iconTop a {
+            display: inline-flex;
+            justify-content: center;
+
+            background: var(--main-color)s;
+            border-radius: .8rem;
+        }
+
+        .footer-iconTop a:hover {
+            box-shadow: 0 0 1rem var(--hover-color);
+
+        }
+
+        .footer-iconTop a i {
+            font-size: 2.4rem;
+            color: var(--second-bg-color);
+        }
+
+        .button {
+            background-color: white;
+            color: #191e27;
+            border-radius: 8px;
+            width: fit-content;
+            align-items: center;
+            margin: auto;
+            padding: 12px;
+            transition: all 0.3 ease;
+        }
+
+        .button:hover {
+            background-color: #191e27;
+            color: white;
+            box-shadow: 1px 1px 14px white;
+        }
+
+
+        /* news */
+        .news-block {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.news-item {
+  margin: 20px;
+  width: 250px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.news-item h3 {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.news-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+.news-item span {
+  font-size: 12px;
+  color: #999;
+  margin-right: 10px;
+}
+        /* end news */
+
+        /* album */
+        .photo-album {
+  overflow-x: scroll;
+  white-space: nowrap;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.photo-album-inner {
+  display: flex;
+  animation: scroll 50s linear infinite;
+}
+
+.photo-album img {
+  width: 400px;
+  height: 200px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-350px * 5 - 20px * 4));
+  }
+}
+        /* end album */
+
+        /* admision */
+        #admission-form {
+  margin-bottom: 2rem;
+  color: white;
+}
+
+#admission-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#admission-form input,
+#admission-form select {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#admission-form input:focus,
+#admission-form select:focus {
+  outline: none;
+  box-shadow: 0 0 2px 1px #005a9c;
+}
+
+#admission-form button {
+  background-color: #122f44;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+#admission-form button:hover {
+  background-color: #ffffff;
+  color: #191e27;
+  border-radius: 24px 155px 25px 168px;
+-webkit-border-radius: 24px 155px 25px 168px;
+-moz-border-radius: 24px 155px 25px 168px;
+}
+
+
+
+    /* admision */
+
+
+
+
+        /* animista */
+       
+        /* end animista */
+    </style>
+
+</head>
+
+<body>
+    <header class="header">
+        <h1 style="text-align: left; padding: 12px;">Nusa Bangsa</h1>
+        <nav class="navbar">
+
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#Academic">Academic</a>
+            <a href="#news">News</a>
+            <a href="#album">Album</a>
+            <a href="#admision-form">Admision</a>
+
+
+        </nav>
+
+
+        </div>
+        </nav>
+    </header>
+
+    <!-- login -->
+    <!-- home -->
+    <section id="home" class="home">
+        <div data-aos="fade-up" data-aos-duration="1000" class="home-content">
+            
+
+                <h1>Nusa Bangsa <span>High School</span> </h1>
+            
+            <h3>software and game Development (Software  Engginering)</h3>
+            
+        </div>
+    </section>
+    <section class="about" id="about" style="color: white; ">
+
+        <h1 style="color: white; margin-top: -20px; font-size: 40px; border-bottom: 1px solid white;">About Us</h1>
+         <h4 style="font-size: 25px;">Muhamad Riffa Faturahman University</h4>
+        <div class="desc" style="font-size: 20px; ">
+            <p> ipLoremsum dolor, sit amet consectetur adipisicing elit. Tempore corporis reprehenderit inventore minus ut, aut sunt nobis animi molestias officia assumenda quaerat eligendi recusandae laborum ducimus voluptatem quae ea molestiae.</p>
+            <p style="border-bottom: 1px solid ;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, laboriosam dolorem. Quas provident illum dicta facere impedit earum voluptatum corporis sit voluptatem perferendis. Dolorem vero consectetur iste! Tenetur, dolorem magnam.</p>
+            <box-icon name='medal' type='solid' color='#ffffff' ></box-icon>
+            <div class="button" >
+                See more
+            </div>
+        </div>
+    </section>
+    <section class="Academic" id="Academic">
+       <h1 style="text-align: center; font-size: 40px; color: white; border-bottom: 1px solid;">Academics</h1>
+       <h3 style="color: white; text-align: center;
+       margin: 12px;">Academics
+           Preparing students to make meaningful contributions to society as engaged citizens and leaders in a complex world</h3>
+       <div class="academic-content" data-aos="fade-up" data-aos-duration="1000">
+        <div class="news-card">
+            <img src="A Muggle In The Wizarding World_!  - Quidditch Practise.jpeg" alt="News Image">
+            <div class="news-content">
+              <h2>Magic education</h2>
+              <p>News summary or first few lines of the article goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ligula vitae nisi tincidunt dapibus. Pellentesque venenatis metus ac orci imperdiet, nec pellentesque velit tempus.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+        <div class="news-card">
+          <img src="A Muggle In The Wizarding World_!  - Quidditch Practise.jpeg" alt="News Image">
+          <div class="news-content">
+            <h2>Magic education</h2>
+            <p>News summary or first few lines of the article goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ligula vitae nisi tincidunt dapibus. Pellentesque venenatis metus ac orci imperdiet, nec pellentesque velit tempus.</p>
+            <a href="#">Read More</a>
+            
+          </div>
+        </div>
+        <div class="news-card">
+            <img src="A Muggle In The Wizarding World_!  - Quidditch Practise.jpeg" alt="News Image">
+            <div class="news-content">
+              <h2>Magic education</h2>
+              <p>News summary or first few lines of the article goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eget ligula vitae nisi tincidunt dapibus. Pellentesque venenatis metus ac orci imperdiet, nec pellentesque velit tempus.</p>
+              <a href="#">Read More</a>
+            </div>
+          </div>
+       </div>
+
+    </section>
+
+    <section class="news" id="news">
+        <!-- News Block -->
+<div class="news-block">
+    <h2>Latest News</h2>
+    <div class="news-list" data-aos="fade-up" data-aos-duration="1000">
+      <div class="news-item">
+        <img src="kenny-eliason-zFSo6bnZJTw-unsplash.jpg" alt="News Image 1">
+        <h3>Top 10 school</h3>
+        <p>Which school will have the first placement?</p>
+        <span>hogwart had the first placement</span>
+        <span>view more</span>
+        
+      </div>
+      <div class="news-item">
+        <img src="cdc-GDokEYnOfnE-unsplash.jpg" alt="News Image 2" >
+        <h3>Hogwart has the best student</h3>
+        <p>hogwart has the best student of the world</p>
+        <span>view more</span>
+        
+      </div>
+      <div class="news-item">
+        <img src="Hogwarts_Seal_Png_Image_Royalty_Free_Stock_-_Harry_Potter_Png_Hogwarts_PNG_Transparent_With_Clear_Background_ID_169787_png_-_Free_PNG_Images-removebg-preview.png" alt="News Image 3">
+        <h3>News Title 3</h3>
+        <p>News Description 3</p>
+        <span>view more</span>
+        
+      </div>
+     
+    </div>
+  </div>
+    </section>
+    <section class="album" id="album">
+        <h1 style="text-align: center; color: whitesmoke; font-size: 40px; border-bottom: 1px solid white;">Album</h1>
+        <div class="photo-album">
+            <div class="photo-album-inner">
+              <img src="WhatsApp Image 2024-05-17 at 05.51.39_44f4bbd4.jpg" alt="Photo 4" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.47_d2402715.jpg" alt="Photo 2" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.51_578accce.jpg" alt="Photo 3" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.54.19_f0923d0e.jpg" alt="Photo 5" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.47_6d642ae0.jpg" alt="Photo 1" loading="lazy">
+            </div>
+          </div>
+        <div class="photo-album" style="border-bottom: 1px solid white;">
+            <div class="photo-album-inner">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.47_6d642ae0.jpg" alt="Photo 1" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.47_d2402715.jpg" alt="Photo 2" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.48.51_578accce.jpg" alt="Photo 3" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.51.39_44f4bbd4.jpg" alt="Photo 4" loading="lazy">
+              <img src="WhatsApp Image 2024-05-17 at 05.54.19_f0923d0e.jpg" alt="Photo 5" loading="lazy">
+            </div>
+          </div>
+    </section>
+    <section id="admission-form">
+        <h2>Admission Form</h2>
+        <form>
+          <label for="name" >Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" required />
+          <label for="grade">Grade Level:</label>
+          <select id="grade" name="grade">
+            <option value="kindergarten">Kindergarten</option>
+            <option value="elementary">Elementary</option>
+            <option value="middle">Middle School</option>
+            <option value="high">High School</option>
+          </select>
+          <label for="parent-email">Parent Email:</label>
+          <input type="email" id="parent-email" name="parent-email" required />
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+
+    <footer class="footer">
+        <div class="footer-text">
+            <p style="color: white;">Copyright &copy; 2024 by Muhamad Riffa Faturahman | All Right Reserved.</p>
+        </div>
+    </footer>
+    <!-- js -->
+
+    
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+    </script>
+</body>
+<script>
+    AOS.init();
+</script>
+
+</html>
